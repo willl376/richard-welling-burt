@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://willl376.github.io/richard-welling-burt/sitemap.xml
