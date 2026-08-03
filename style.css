@@ -1,0 +1,179 @@
+/* Richard Welling Burt - Civil War Letters, Poems & Odes */
+/* Modern static site stylesheet */
+
+:root {
+  --ink: #26221c;
+  --paper: #fdfbf4;
+  --panel: #f4efe2;
+  --accent: #7a1f1f;
+  --accent-dark: #541414;
+  --gold: #b8955a;
+  --line: #d9d0bb;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  background: var(--ink);
+  color: #fff;
+  padding: 1.1rem 1.5rem;
+  border-bottom: 4px solid var(--gold);
+}
+.site-header .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+.site-header .title a { color: #fff; text-decoration: none; }
+.site-header .subtitle {
+  font-size: 0.92rem;
+  color: #d8cfbd;
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
+/* ---------- Navigation ---------- */
+.site-nav {
+  background: var(--accent);
+}
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.site-nav a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.95rem;
+}
+.site-nav a:hover, .site-nav a.active {
+  background: var(--accent-dark);
+  text-decoration: underline;
+}
+
+/* ---------- Main layout ---------- */
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+article, .page {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 2rem 2.2rem;
+  box-shadow: 0 2px 8px rgba(60, 45, 20, 0.06);
+}
+
+/* ---------- Typography ---------- */
+h1 { font-size: 2rem; color: var(--accent-dark); margin: 0 0 1rem; line-height: 1.25; }
+h2 { font-size: 1.45rem; color: var(--accent-dark); margin: 1.8rem 0 0.7rem; }
+h3 { font-size: 1.2rem; color: var(--ink); margin: 1.4rem 0 0.5rem; }
+p { margin: 0.9rem 0; }
+a { color: var(--accent); }
+a:hover { color: var(--accent-dark); }
+
+blockquote {
+  margin: 1.2rem 0;
+  padding: 0.4rem 0 0.4rem 1.2rem;
+  border-left: 3px solid var(--gold);
+  background: var(--panel);
+  font-style: italic;
+}
+
+/* ---------- Poetry ---------- */
+.poem {
+  font-family: Georgia, serif;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  margin: 1.2rem 0;
+}
+.poem .title { font-weight: bold; font-style: italic; display: block; margin-bottom: 0.4rem; }
+
+/* ---------- Figures / images ---------- */
+figure {
+  margin: 1.5rem auto;
+  text-align: center;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+  padding: 4px;
+}
+figcaption {
+  font-size: 0.9rem;
+  color: #6b6150;
+  font-style: italic;
+  margin-top: 0.4rem;
+}
+
+/* ---------- Meta / source lines ---------- */
+.source-note {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--line);
+  font-size: 0.95rem;
+  color: #6b6150;
+}
+.source-note cite { font-style: italic; }
+
+/* ---------- Links grid (homepage / index) ---------- */
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.6rem 1.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0;
+}
+.link-grid li { border-bottom: 1px dotted var(--line); padding: 0.25rem 0; }
+.link-grid a { text-decoration: none; font-weight: bold; }
+.link-grid a:hover { text-decoration: underline; }
+
+/* ---------- Tables ---------- */
+table { border-collapse: collapse; margin: 1rem 0; }
+td, th { padding: 0.4rem 0.7rem; border: 1px solid var(--line); vertical-align: top; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--ink);
+  color: #cfc6b2;
+  text-align: center;
+  padding: 1.4rem 1rem;
+  font-size: 0.9rem;
+  border-top: 4px solid var(--gold);
+}
+.site-footer a { color: #fff; }
+
+/* ---------- Misc ---------- */
+small, .muted { color: #6b6150; }
+hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
+.center { text-align: center; }
+
+@media (max-width: 600px) {
+  main { padding: 1rem 0.8rem 2rem; }
+  article, .page { padding: 1.2rem 1rem; }
+  h1 { font-size: 1.6rem; }
+  .site-header .title { font-size: 1.2rem; }
+}
